@@ -1,0 +1,114 @@
+/* Book Now Section */
+.book-now {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .book-now-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* max-width: 10000px; */
+    margin: 0 auto;
+    background: white;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left: Image */
+  .book-now-image {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .book-now-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Right: Form */
+  .book-now-form {
+    flex: 1;
+  }
+  
+  .book-now-form h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .book-now-form p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f39c12;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Status Message */
+  .status-message {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #27ae60;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .book-now-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 50px;
+    }
+  
+    .book-now-image {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .book-now-form {
+      width: 100%;
+    }
+  }
+  

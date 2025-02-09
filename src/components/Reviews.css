@@ -1,0 +1,57 @@
+/* Reviews Section */
+.reviews {
+    text-align: center;
+    /* padding: 60px 20px; */
+    background-color: #fff;
+  }
+  
+  /* Section Title */
+  .reviews-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  /* Reviews Grid */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+  }
+  
+  /* Review Card */
+  .review-card {
+    background: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Google Review Screenshot */
+  .review-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .reviews-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .reviews-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

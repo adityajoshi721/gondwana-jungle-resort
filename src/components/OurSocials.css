@@ -1,0 +1,59 @@
+/* Our Socials Section */
+.our-socials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .our-socials h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Socials Container */
+  .socials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* YouTube Section */
+  .youtube-section, .instagram-section {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .youtube-section h3, .instagram-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Instagram Section */
+  .instagram-embed img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .instagram-embed img:hover {
+    transform: scale(1.05);
+  }
+  
+  .instagram-section p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .socials-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  

@@ -1,0 +1,44 @@
+/* Floating WhatsApp Button */
+.whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .whatsapp-chat img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  
+  .whatsapp-chat:hover {
+    background-color: #1ebe57;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .whatsapp-chat {
+      bottom: 15px;
+      right: 15px;
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+  
+    .whatsapp-chat img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
