@@ -8,7 +8,7 @@ import img02 from "../assets/swimmingpool.webp";
 import img03 from "../assets/building2.jpg";
 import img04 from "../assets/junglebazar.webp";
 import img05 from "../assets/junglebazar1.webp";
-import img06 from "../assets/room1.jpg";
+import img06 from "../assets/Room1.jpg";
 import img07 from "../assets/guest1.webp";
 import img08 from "../assets/guest2.webp";
 import img09 from "../assets/guest3.webp";
@@ -16,7 +16,7 @@ import img10 from "../assets/guest4.webp";
 import img11 from "../assets/guest5.webp";
 import img12 from "../assets/guest6.webp";
 import img13 from "../assets/guest7.webp";
-import img14 from "../assets/room2.jpg";
+import img14 from "../assets/Room2.jpg";
 import img15 from "../assets/guest2.webp";
 import img16 from "../assets/guest2.webp";
 
