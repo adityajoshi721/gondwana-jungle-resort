@@ -33,7 +33,7 @@ export default function Contact(){
       <textarea required name="message" rows={5} placeholder="Tell us your dates, number of guests, and any requests" style={{...inputStyle, marginTop:12, resize:"vertical"}} />
       <div style={{display:"flex", gap:12, marginTop:12}}>
         <button className="cta" type="submit">Send Enquiry</button>
-        <a className="cta" href="https://wa.me/919999999999" target="_blank" rel="noreferrer" style={{background:"linear-gradient(135deg, var(--accent-2), #2b8a3e)"}}>WhatsApp</a>
+        <a className="cta" href="https://wa.me/919921150541" target="_blank" rel="noreferrer" style={{background:"linear-gradient(135deg, var(--accent-2), #2b8a3e)"}}>WhatsApp</a>
       </div>
       {status && <p style={{marginTop:10, color:"var(--muted)"}}>{status}</p>}
     </form>

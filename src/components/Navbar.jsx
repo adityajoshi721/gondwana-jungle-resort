@@ -40,7 +40,7 @@ export default function Navbar() {
               className="brand__logo-img"
             />
           </span>
-          <span className="brand__text">Tadoba Tiger Safaris</span>
+          <span className="brand__text">Gondwana Jungle Resorts</span>
         </a>
 
         {/* Desktop links */}
