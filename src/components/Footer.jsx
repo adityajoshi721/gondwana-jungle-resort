@@ -1,4 +1,5 @@
 import React from "react";
+import logoImg from "../assets/image.png"; // your logo image
 
 export default function Footer(){
   return (
@@ -6,11 +7,18 @@ export default function Footer(){
       <div className="container cols">
         <div>
           <div className="brand">
-            <span className="brand__logo">GJ</span>
-            <span className="brand__text">Tadoba Tiger Safaris</span>
+            {/* <span className="brand__logo">GJ</span> */}
+            <span className="brand__logo">
+                        <img
+                          src={logoImg}
+                          alt="Gondwana Jungle Resort Logo"
+                          className="brand__logo-img"
+                        />
+                      </span>
+            <span className="brand__text">Gondwana Jungle Resorts</span>
           </div>
           <p className="small" style={{marginTop:8}}>Near Tadoba National Park • Maharashtra, India</p>
-          <p className="small">© {new Date().getFullYear()} Tadoba Tiger Safaris. All rights reserved.</p>
+          <p className="small">© {new Date().getFullYear()} Gondwana Jungle Resorts. All rights reserved.</p>
         </div>
         <div>
           <h4>Contact</h4>

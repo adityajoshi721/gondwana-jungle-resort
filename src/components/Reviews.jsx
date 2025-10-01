@@ -87,7 +87,7 @@ const Reviews = () => {
 
       <div className="reviews-head">
         <h2 className="reviews-title">
-          ⭐ Guest Reviews – 4.8★ Rated by 10,000+ Happy Visitors
+          ⭐ Guest Reviews – 4.8★ Rated by 20,000+ Happy Visitors
         </h2>
         <p className="reviews-subtitle">
           Real stories from real guests who stayed at <strong>Gondwana Jungle Resort</strong>.  

@@ -67,7 +67,7 @@ export default function Amenities() {
         .gallery-grid {
           display: grid;
           gap: 16px;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(1, 1fr);
         }
         @media (min-width: 720px) {
           .gallery-grid {

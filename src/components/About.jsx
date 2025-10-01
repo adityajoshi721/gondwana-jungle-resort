@@ -16,10 +16,10 @@ export default function About() {
 
         {/* Highlight Stats */}
         <div className="stats-grid" style={{ display: "grid", gap: "1rem", marginTop: "1.5rem" }}>
-          {/* <div className="stat-card">
-            <h2>5,000+</h2>
-            <p>Guests hosted in just 2 years</p>
-          </div> */}
+          <div className="stat-card">
+            <h2>CSA Index</h2>
+            <p>We have the distinction of being the highest referred tour company in wildlife.</p>
+          </div>
           <div className="stat-card">
             <h2>85%+</h2>
             <p>Chance of tiger spotting on our recommended safaris</p>

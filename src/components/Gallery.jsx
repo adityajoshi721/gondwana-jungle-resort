@@ -17,6 +17,7 @@ export default function Gallery(){
   return (
     <>
       <div className="grid-3">
+        
         {IMGS.map((src, i) => (
           <div key={i} className="card" onClick={() => { setIndex(i); setOpen(true); }} style={{cursor:"zoom-in"}}>
             <div className="card__media" style={{background:`url(${src}) center/cover no-repeat`}} />
