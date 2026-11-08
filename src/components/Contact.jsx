@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
