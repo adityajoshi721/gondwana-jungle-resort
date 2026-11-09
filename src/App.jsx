@@ -12,6 +12,7 @@ import pool from "./assets/IMG-20250816-WA0036.jpg";
 import dining from "./assets/diningarea.webp";
 import bazaar from "./assets/junglebazar.webp";
 import guests from "./assets/about.jpg";
+import GuestStories from "./components/GuestStories.jsx";
 import film from "./assets/VID-20250730-WA0001.mp4";
 
 const whatsapp = "https://wa.me/919921150541?text=Hello%20Gondwana%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay.";
@@ -23,11 +24,6 @@ const gallery = [
   { src: dining, alt: "Dining room at Gondwana", label: "Dining" },
   { src: bazaar, alt: "The Jungle Bazaar interior", label: "Jungle Bazaar" },
   { src: guests, alt: "Guests gathered outside Gondwana", label: "At Gondwana" },
-];
-const reviews = [
-  { name: "Kunal", quote: "Special mention for the food that is made here, its simple homely food buffet but the flavour will blow your mind." },
-  { name: "Karan Singh", quote: "Their kindness and attention to detail made my visit truly special and memorable." },
-  { name: "Harshad Sonawane", quote: "This is a good place to stay while you are visiting Tadoba Tiger Reserve." },
 ];
 
 function Brand() {
@@ -72,6 +68,7 @@ export default function App() {
         </div>
         <div className="hero-visual"><img src={hero} alt="Gondwana Jungle Resort building framed by green trees" fetchPriority="high" /><div className="hero-caption"><span />Your base for the wild</div></div>
       </section>
+      <GuestStories maps={maps} />
       <section className="intro-band"><div className="container intro-band-inner"><span className="eyebrow">Welcome to Gondwana</span><p>Rooted in nature. Made for the moments between adventures.</p><a href="#about" aria-label="Read about Gondwana">↘</a></div></section>
       <section className="section container about-grid" id="about">
         <div className="about-image"><img src={aerial} alt="Aerial view of the resort, its lawns and surrounding trees" loading="lazy" /><span className="image-tag">The place we call home</span></div>
@@ -103,13 +100,10 @@ export default function App() {
       <section className="section section-gallery" id="gallery"><div className="container"><div className="section-top"><Heading eyebrow="04 / Gallery" title="A glimpse of Gondwana." intro="A few moments from the resort, captured in the place itself." /><span className="gallery-hint">Select a photo to view it larger</span></div>
         <div className="gallery-filters" role="group" aria-label="Filter gallery">{["All", "Rooms", "Around the resort"].map(category => <button type="button" key={category} aria-pressed={filter === category} onClick={() => setFilter(category)}>{category}</button>)}</div><div className="gallery-grid">{filteredGallery.map((item, index) => <button className="gallery-item" type="button" key={item.label} onClick={() => setGalleryIndex(index)} aria-label={`View photo: ${item.alt}`}><img src={item.src} alt="" loading="lazy" /><span>{item.label} <span aria-hidden="true">↗</span></span></button>)}</div>
       </div><Lightbox open={galleryIndex >= 0} close={() => setGalleryIndex(-1)} index={Math.max(galleryIndex, 0)} slides={filteredGallery.map(({src, alt}) => ({src, alt}))} /></section>
-      <section className="section container" id="video"><div className="section-top"><Heading eyebrow="05 / Moving stories" title="Step inside Gondwana." intro="Explore the spaces, meet the atmosphere and see a guest visit — through films shared by the resort." /><a className="text-link" href="https://www.youtube.com/@vjtigerfilms6145" target="_blank" rel="noopener noreferrer">More on YouTube ↗</a></div>
-        <div className="stories-grid"><article className="story-main"><video src="/media/resort-tour.mp4" poster="/media/resort-tour.webp" controls playsInline preload="none" aria-label="Resort tour including rooms and Jungle Bazaar" /><div><span className="eyebrow">01 / The resort film</span><h3>A tour, at your own pace.</h3><p>From Jungle Bazaar to the guest rooms. Play with sound for the original film.</p></div></article><article className="story-guest"><video src="/media/guest-visit.mp4" poster="/media/guest-visit.webp" controls playsInline preload="none" aria-label="Guest visit feature shared by Gondwana" /><div><span className="eyebrow">02 / A guest visit</span><h3>Moments shared.</h3><p>A guest-visit feature from the resort.</p></div></article></div>
+      <section className="section container" id="video"><div className="section-top"><Heading eyebrow="05 / Moving stories" title="Step inside Gondwana." intro="Take a closer look at the rooms and spaces that make up a Gondwana stay." /><a className="text-link" href="https://www.youtube.com/@vjtigerfilms6145" target="_blank" rel="noopener noreferrer">More on YouTube ↗</a></div>
+        <div className="stories-grid resort-film-only"><article className="story-main"><video src="/media/resort-tour.mp4" poster="/media/resort-tour.webp" controls playsInline preload="none" aria-label="Resort tour including rooms and Jungle Bazaar" /><div><span className="eyebrow">01 / The resort film</span><h3>A tour, at your own pace.</h3><p>From Jungle Bazaar to the guest rooms. Play with sound for the original film.</p></div></article></div>
         <details className="archive-film"><summary>Watch another glimpse of Gondwana</summary><video src={film} controls playsInline preload="none" aria-label="Earlier resort film" /></details>
       </section>
-      <section className="section section-sand" id="reviews"><div className="container"><div className="section-top"><Heading eyebrow="06 / Guest reviews" title="Words from our guests." intro="Read the experiences shared by visitors, with more reviews available on Google." /><a className="text-link desktop-only" href={maps} target="_blank" rel="noopener noreferrer">View on Google <span aria-hidden="true">↗</span></a></div>
-        <div className="review-grid">{reviews.map(({name, quote}) => <figure className="review-card" key={name}><span className="review-stars" aria-label="Five out of five stars">★★★★★</span><blockquote>“{quote}”</blockquote><figcaption>{name}<small>Google review · excerpt from the resort's collection</small></figcaption></figure>)}</div><a className="text-link mobile-only" href={maps} target="_blank" rel="noopener noreferrer">More reviews on Google <span aria-hidden="true">↗</span></a>
-      </div></section>
       <section className="section container location-grid" id="location"><div className="location-copy"><Heading eyebrow="07 / Find us" title="Your gateway to Tadoba." intro="Gondwana Jungle Resort, Madanapur, Chimur, Vihirgaon, Maharashtra 442903." /><a className="button" href={maps} target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a></div><iframe title="Google Map showing Gondwana Jungle Resort near Tadoba" src="https://www.google.com/maps?q=Gondwana%20Jungle%20Resort%20Madanapur%20Maharashtra&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></section>
       <section className="section contact-section" id="contact"><div className="container contact-grid"><div><Heading eyebrow="08 / Get in touch" title="Let’s plan your time in the wild." intro="Tell us when you would like to visit and what you have in mind. We’ll help you take the next step." /><div className="contact-direct"><a href="tel:+919921150541">+91 99211 50541</a><a href="mailto:gondwana357@gmail.com">gondwana357@gmail.com</a><a href={whatsapp} target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a></div></div><Contact /></div></section>
     </main>

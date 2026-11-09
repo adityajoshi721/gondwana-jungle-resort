@@ -12,6 +12,10 @@ try {
  for(const src of [...html.matchAll(/(?:src|poster)="(\/media\/[^\"]+)"/g)].map(x=>x[1])) {
   if(!existsSync('public'+src)) throw Error('Missing media '+src);
  }
+ const sections = [...html.matchAll(/<section[^>]*>/g)].map(match => match[0]);
+ if (!sections[1]?.includes('id="reviews"')) throw Error('Guest stories must immediately follow the hero');
+ if ((html.match(/View original review/g) || []).length !== 8) throw Error('Expected all eight saved reviews');
+ if (!html.includes('Mrunmayee Deshpande') || !html.includes('235')) throw Error('Missing guest proof content');
  console.log('PASS: React page renders, planner and all new media references resolve.');
  console.log(readdirSync('public/media').map(n=>n+': '+Math.round(statSync('public/media/'+n).size/1024)+' KB').join('\n'));
 } finally {await server.close();}

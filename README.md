@@ -40,3 +40,9 @@ The stay planner generates a WhatsApp enquiry with interest, group size and opti
 Validation: `node node_modules/vite/bin/vite.js build` and `node scripts/verify-refresh.mjs`. The latter checks server rendering and local media references, not browser interactions. Desktop/mobile visual review remains necessary: browser preview permission was declined during this refresh.
 
 Suggested next differentiators (require resort input): a verified illustrated property map; a pre-arrival guide with confirmed access/gate information; professionally captioned room and resort films; and an accessible 360-degree room tour from a dedicated shoot. Do not publish timings, distances, policies or inclusions until the resort confirms them.
+
+## Guestbook section
+
+Guest feedback now appears immediately after the hero. It includes both available guest-feedback films (the supplied celebrity visit and existing VID-20250730-WA0003), all eight saved Google review screenshots with readable excerpts, and a link to the complete live Google collection. It is not an automatically synchronized feed of every Google review.
+
+The static 4.7/5 and 235 review figures come from Google's indexed listing retrieved on 9 November 2026: https://www.google.co.in/travel/hotels/entity/CgoIjM_mg9emsux-EAE . The visible source note makes clear that figures can change; refresh manually against Google. Mrunmayee Deshpande's visit is attributed from the client's explicit confirmation and the supplied resort film's title; no formal endorsement or brand ambassadorship is claimed. No occupancy, growth or repeat-guest percentage has been invented.
