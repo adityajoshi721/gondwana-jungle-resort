@@ -4,7 +4,7 @@ import "yet-another-react-lightbox/styles.css";
 import StayPlanner from "./components/StayPlanner.jsx";
 import Contact from "./components/Contact.jsx";
 import logo from "./assets/image.png";
-import hero from "./assets/building2.jpg";
+import hero from "./assets/forest-cover.webp";
 import aerial from "./assets/topView.jpg";
 const roomDouble = "/media/room-3.webp";
 const roomGroup = "/media/room-6.webp";
@@ -66,7 +66,7 @@ export default function App() {
           <div className="hero-actions"><a className="button" href="#stay">Explore your stay <span aria-hidden="true">↗</span></a><a className="text-link" href="#planner">Design your stay <span aria-hidden="true">→</span></a></div>
           <div className="hero-notes"><span>Near Tadoba</span><span>Safari assistance</span><span>Forest-view pool</span></div>
         </div>
-        <div className="hero-visual"><img src={hero} alt="Gondwana Jungle Resort building framed by green trees" fetchPriority="high" /><div className="hero-caption"><span />Your base for the wild</div></div>
+        <div className="hero-visual"><img src={hero} alt="Golden sunlight filtering through a lush green forest" fetchPriority="high" /><div className="hero-caption"><span />Your base for the wild</div></div>
       </section>
       <GuestStories maps={maps} />
       <section className="intro-band"><div className="container intro-band-inner"><span className="eyebrow">Welcome to Gondwana</span><p>Rooted in nature. Made for the moments between adventures.</p><a href="#about" aria-label="Read about Gondwana">↘</a></div></section>
