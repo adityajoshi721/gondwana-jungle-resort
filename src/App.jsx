@@ -5,13 +5,14 @@ import StayPlanner from "./components/StayPlanner.jsx";
 import Contact from "./components/Contact.jsx";
 import logo from "./assets/image.png";
 import hero from "./assets/forest-cover.webp";
-import aerial from "./assets/topView.jpg";
+const aerial = "/media/resort-aerial.webp";
 const roomDouble = "/media/room-3.webp";
 const roomGroup = "/media/room-6.webp";
-import pool from "./assets/IMG-20250816-WA0036.jpg";
+const pool = "/media/pool-night.webp";
 import dining from "./assets/diningarea.webp";
 import bazaar from "./assets/junglebazar.webp";
 import guests from "./assets/about.jpg";
+import AutoVideo from "./components/AutoVideo.jsx";
 import GuestStories from "./components/GuestStories.jsx";
 import film from "./assets/VID-20250730-WA0001.mp4";
 
@@ -19,7 +20,9 @@ const whatsapp = "https://wa.me/919921150541?text=Hello%20Gondwana%2C%20I%27d%20
 const maps = "https://www.google.com/maps/place/gondwana+jungle+resort/data=!4m2!3m1!1s0x3a2cb53cdc3cd7ab:0x7ed8c9357079a78c";
 const gallery = [
   { src: aerial, alt: "Aerial view of the resort and its green grounds", label: "The grounds" },
-  { src: pool, alt: "The swimming pool beside the trees", label: "Forest-view pool" },
+  { src: pool, alt: "Illuminated swimming pool at Gondwana at night", label: "Pool after dark" },
+  { src: "/media/pool-moonlight.webp", alt: "Blue pool beneath the moon and trees", label: "Pool by moonlight" },
+  { src: "/media/amphitheatre.webp", alt: "Tadoba Wild Lens amphitheatre and conference building beside the lawn", label: "Tadoba Wild Lens" },
   ...Array.from({length: 6}, (_, i) => ({src: `/media/room-${i+1}.webp`, alt: `Guest room interior at Gondwana, view ${i+1}`, label: `Room detail ${String(i+1).padStart(2,"0")}`, category: "Rooms"})),
   { src: dining, alt: "Dining room at Gondwana", label: "Dining" },
   { src: bazaar, alt: "The Jungle Bazaar interior", label: "Jungle Bazaar" },
@@ -88,7 +91,7 @@ export default function App() {
       </div></section>
       <StayPlanner />
       <section className="section container" id="amenities"><div className="section-top"><Heading eyebrow="03 / Life at Gondwana" title="The good parts of staying in." intro="A little space for every kind of day, whether you are heading out at dawn or taking it slow." /></div>
-        <div className="amenity-grid"><article className="amenity-feature"><img src={pool} alt="Pool with a view of the surrounding trees" loading="lazy" /><div><span className="eyebrow">Take a dip</span><h3>Forest-view pool</h3></div></article>
+        <div className="amenity-grid"><article className="amenity-feature"><img src={pool} alt="Gondwana swimming pool illuminated blue at night" loading="lazy" /><div><span className="eyebrow">Take a dip</span><h3>Forest-view pool</h3></div></article>
           <div className="amenity-list">{[
             ["Dining", "Gather for meals after a day exploring Tadoba."],
             ["Lawns & amphitheatre", "Open-air spaces to unwind together."],
@@ -101,8 +104,8 @@ export default function App() {
         <div className="gallery-filters" role="group" aria-label="Filter gallery">{["All", "Rooms", "Around the resort"].map(category => <button type="button" key={category} aria-pressed={filter === category} onClick={() => setFilter(category)}>{category}</button>)}</div><div className="gallery-grid">{filteredGallery.map((item, index) => <button className="gallery-item" type="button" key={item.label} onClick={() => setGalleryIndex(index)} aria-label={`View photo: ${item.alt}`}><img src={item.src} alt="" loading="lazy" /><span>{item.label} <span aria-hidden="true">↗</span></span></button>)}</div>
       </div><Lightbox open={galleryIndex >= 0} close={() => setGalleryIndex(-1)} index={Math.max(galleryIndex, 0)} slides={filteredGallery.map(({src, alt}) => ({src, alt}))} /></section>
       <section className="section container" id="video"><div className="section-top"><Heading eyebrow="05 / Moving stories" title="Step inside Gondwana." intro="Take a closer look at the rooms and spaces that make up a Gondwana stay." /><a className="text-link" href="https://www.youtube.com/@vjtigerfilms6145" target="_blank" rel="noopener noreferrer">More on YouTube ↗</a></div>
-        <div className="stories-grid resort-film-only"><article className="story-main"><video src="/media/resort-tour.mp4" poster="/media/resort-tour.webp" controls playsInline preload="none" aria-label="Resort tour including rooms and Jungle Bazaar" /><div><span className="eyebrow">01 / The resort film</span><h3>A tour, at your own pace.</h3><p>From Jungle Bazaar to the guest rooms. Play with sound for the original film.</p></div></article></div>
-        <details className="archive-film"><summary>Watch another glimpse of Gondwana</summary><video src={film} controls playsInline preload="none" aria-label="Earlier resort film" /></details>
+        <div className="stories-grid resort-film-only"><article className="story-main"><AutoVideo src="/media/resort-tour.mp4" poster="/media/resort-tour.webp" controls playsInline preload="none" aria-label="Resort tour including rooms and Jungle Bazaar" /><div><span className="eyebrow">01 / The resort film</span><h3>A tour, at your own pace.</h3><p>From Jungle Bazaar to the guest rooms. Videos start muted. Use the controls to hear the original sound.</p></div></article></div>
+        <details className="archive-film"><summary>Watch another glimpse of Gondwana</summary><AutoVideo src={film} controls playsInline preload="none" aria-label="Earlier resort film" /></details>
       </section>
       <section className="section container location-grid" id="location"><div className="location-copy"><Heading eyebrow="07 / Find us" title="Your gateway to Tadoba." intro="Gondwana Jungle Resort, Madanapur, Chimur, Vihirgaon, Maharashtra 442903." /><a className="button" href={maps} target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a></div><iframe title="Google Map showing Gondwana Jungle Resort near Tadoba" src="https://www.google.com/maps?q=Gondwana%20Jungle%20Resort%20Madanapur%20Maharashtra&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></section>
       <section className="section contact-section" id="contact"><div className="container contact-grid"><div><Heading eyebrow="08 / Get in touch" title="Let’s plan your time in the wild." intro="Tell us when you would like to visit and what you have in mind. We’ll help you take the next step." /><div className="contact-direct"><a href="tel:+919921150541">+91 99211 50541</a><a href="mailto:gondwana357@gmail.com">gondwana357@gmail.com</a><a href={whatsapp} target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a></div></div><Contact /></div></section>
