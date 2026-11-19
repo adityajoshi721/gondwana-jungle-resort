@@ -1,6 +1,6 @@
 # Gondwana Jungle Resort
 
-React + Vite website for Gondwana Jungle Resort near Tadoba. The page uses the resort's existing photography, video, review screenshots and contact details. Room rates and packages are deliberately requested by enquiry rather than shown as fixed prices.
+React + Vite website for Gondwana Jungle Resort near Tadoba. The page uses the resort's existing photography, video, review screenshots and contact details. The published starting room rate is ₹6,999 per room per night for two guests, including meals and taxes. Safari charges are separate. The resort confirms availability and current rates for each enquiry.
 
 ## Run locally
 
@@ -11,9 +11,15 @@ npm run dev
 
 Build with `npm run build`. The static output is in `dist/`.
 
-## Email enquiries
+## Enquiries and tracking
 
-The form works immediately as a prepared email opened in the visitor's email app. To enable direct delivery from the form, create an [EmailJS](https://www.emailjs.com/) account and connect a service to the resort's verified inbox. Create a template using `{{from_name}}`, `{{reply_to}}`, `{{phone}}`, `{{dates}}`, `{{guests}}`, `{{message}}` and `{{to_email}}`. Set the template's recipient to the verified resort inbox and its reply-to to `{{reply_to}}`. Do not rely on a visitor-controlled recipient field to choose where enquiries go.
+The homepage form and `/tadoba-stay.html` landing page open WhatsApp with a prepared message to +91 99211 50541. Visitors must press Send in WhatsApp to complete the enquiry. Both pages include a source label from `utm_campaign`, and push `whatsapp_open` events to `window.dataLayer`. The landing page also pushes `phone_click`. These events are only hooks until a tag manager or analytics tool is configured. Conversations and confirmed bookings must be recorded in the lead tracker by the resort team.
+
+The landing page is a static, crawlable page for search ads and organic discovery. `robots.txt`, `sitemap.xml`, canonical tags, and Hotel structured data are included. The page does not accept payments or reserve inventory.
+
+## Optional EmailJS delivery
+
+To enable direct email delivery from the homepage form, create an [EmailJS](https://www.emailjs.com/) account and connect a service to the resort's verified inbox. Create a template using `{{from_name}}`, `{{reply_to}}`, `{{phone}}`, `{{dates}}`, `{{guests}}`, `{{message}}` and `{{to_email}}`. Set the template's recipient to the verified resort inbox and its reply-to to `{{reply_to}}`. Do not rely on a visitor-controlled recipient field to choose where enquiries go. The landing page continues to use WhatsApp.
 
 Set the three values in `.env.example` as environment variables in your hosting provider, or copy that file to an untracked `.env.local` for local development:
 
@@ -25,7 +31,7 @@ These are EmailJS browser identifiers, so Vite includes them in the public build
 
 ## Deploy
 
-Import this repository into Vercel or Netlify as a Vite project. Use `npm run build` and publish `dist`. Add the EmailJS environment variables in that hosting project and redeploy. Point the resort domain to the hosting project only after reviewing the live preview and confirming the enquiry destination. No booking system or payment handling is included.
+This repository is connected to the Gondwana Vercel project and its production domain. Vercel builds with `npm run build` and publishes `dist`. If EmailJS is enabled later, add the environment variables to the Vercel project and test a real delivery. No booking system or payment handling is included.
 
 The existing WhatsApp, Instagram, YouTube and Google Maps links remain in the site. Update them if the resort's official profiles or phone number change.
 
@@ -35,7 +41,7 @@ The six client-supplied room photographs are in `public/media/room-1.webp` throu
 
 The supplied 09.52.29 video is `guest-visit.mp4`; 09.52.30 is `resort-tour.mp4`. Both preserve original audio and content, with compressed playback files and extracted poster images. Videos use controls and `preload="none"`. Earlier exterior, pool and dining imagery remains because the new delivery contains no replacement stills for those areas. Originals remain in the client ZIP.
 
-The stay planner generates a WhatsApp enquiry with interest, group size and optional dates. It does not reserve anything, quote prices, store guest information or require a backend. WhatsApp opens for the visitor to review and send. EmailJS configuration remains as documented above; without it, the email form opens the visitor's email application.
+The stay planner generates a WhatsApp enquiry with interest, group size and optional dates. It does not reserve anything, quote prices, store guest information or require a backend. WhatsApp opens for the visitor to review and send. EmailJS configuration remains as documented above; without it, the homepage form opens WhatsApp.
 
 Validation: `node node_modules/vite/bin/vite.js build` and `node scripts/verify-refresh.mjs`. The latter checks server rendering and local media references, not browser interactions. Desktop/mobile visual review remains necessary: browser preview permission was declined during this refresh.
 
@@ -45,4 +51,4 @@ Suggested next differentiators (require resort input): a verified illustrated pr
 
 Guest feedback now appears immediately after the hero. It includes both available guest-feedback films (the supplied celebrity visit and existing VID-20250730-WA0003), all eight saved Google review screenshots with readable excerpts, and a link to the complete live Google collection. It is not an automatically synchronized feed of every Google review.
 
-The static 4.7/5 and 235 review figures come from Google's indexed listing retrieved on 9 November 2026: https://www.google.co.in/travel/hotels/entity/CgoIjM_mg9emsux-EAE . The visible source note makes clear that figures can change; refresh manually against Google. Mrunmayee Deshpande's visit is attributed from the client's explicit confirmation and the supplied resort film's title; no formal endorsement or brand ambassadorship is claimed. No occupancy, growth or repeat-guest percentage has been invented.
+The static 4.7/5 rating comes from Google's indexed listing retrieved on 9 November 2026: https://www.google.co.in/travel/hotels/entity/CgoIjM_mg9emsux-EAE . The review count was removed because it changes. Refresh the rating manually against Google. Mrunmayee Deshpande's visit is attributed from the client's explicit confirmation and the supplied resort film's title; no formal endorsement or brand ambassadorship is claimed. No occupancy, growth or repeat-guest percentage has been invented.
