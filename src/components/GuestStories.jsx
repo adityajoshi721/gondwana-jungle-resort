@@ -34,4 +34,3 @@ export default function GuestStories({maps}) {
   <div className="proof-cta"><p>Your next favourite memory could start here.</p><a className="text-link" href="#contact">Ask about your dates ↗</a></div>
  </div></section>;
 }
-

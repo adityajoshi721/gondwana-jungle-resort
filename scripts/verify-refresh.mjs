@@ -19,4 +19,3 @@ try {
  console.log('PASS: React page renders, planner and all new media references resolve.');
  console.log(readdirSync('public/media').map(n=>n+': '+Math.round(statSync('public/media/'+n).size/1024)+' KB').join('\n'));
 } finally {await server.close();}
-

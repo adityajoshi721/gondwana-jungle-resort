@@ -73,4 +73,3 @@ export default function Contact() {
     <p className="form-status" role="status" aria-live="polite">{status}</p>
   </form>;
 }
-

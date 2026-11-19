@@ -4,4 +4,3 @@
 @media(max-width:800px){.header nav>a:not(.nav-cta){display:none}.hero-inner,.enquiry-grid{grid-template-columns:1fr}.hero-copy{padding:65px 0 55px}.hero-photo{height:340px}.features{grid-template-columns:1fr}.features article{display:grid;grid-template-columns:42% 58%}.features img{height:100%;min-height:190px}.enquiry-grid{gap:35px}.section{padding-top:70px;padding-bottom:70px}.quote-strip a{margin-left:0}}
 @media(max-width:520px){.wrap{width:min(100% - 32px,1160px)}.brand{font-size:1.2rem}.header nav .nav-cta{font-size:.7rem;padding:8px}.hero-copy{padding:50px 0}.hero-photo{height:260px;min-height:0}.rate{display:block}.rate span{display:block}.actions>*{width:100%}.features article{display:block}.features img{height:220px}.form{padding:22px}.form .row{grid-template-columns:1fr;gap:0}.footer-inner{display:block}.footer-inner a{display:block;margin-top:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-

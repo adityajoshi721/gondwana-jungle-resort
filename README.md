@@ -52,4 +52,3 @@ Suggested next differentiators (require resort input): a verified illustrated pr
 Guest feedback now appears immediately after the hero. It includes both available guest-feedback films (the supplied celebrity visit and existing VID-20250730-WA0003), all eight saved Google review screenshots with readable excerpts, and a link to the complete live Google collection. It is not an automatically synchronized feed of every Google review.
 
 The static 4.7/5 rating comes from Google's indexed listing retrieved on 9 November 2026: https://www.google.co.in/travel/hotels/entity/CgoIjM_mg9emsux-EAE . The review count was removed because it changes. Refresh the rating manually against Google. Mrunmayee Deshpande's visit is attributed from the client's explicit confirmation and the supplied resort film's title; no formal endorsement or brand ambassadorship is claimed. No occupancy, growth or repeat-guest percentage has been invented.
-

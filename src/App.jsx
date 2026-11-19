@@ -115,4 +115,3 @@ export default function App() {
     <footer className="footer"><div className="container footer-main"><div><Brand /><p>Find your own rhythm near the forest.</p></div><div><h2>Explore</h2><a href="#about">About us</a><a href="#stay">Rooms & packages</a><a href="#gallery">Gallery</a><a href="#location">Location</a></div><div><h2>Connect</h2><a href="https://www.instagram.com/gondwana_tadoba/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.youtube.com/@vjtigerfilms6145" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href={whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Gondwana Jungle Resort</span><span>Made for the journey to Tadoba.</span></div></footer>
   </>;
 }
-

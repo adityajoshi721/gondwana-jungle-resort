@@ -31,4 +31,3 @@ document.getElementById("lead-form").addEventListener("submit", (event) => {
   document.getElementById("form-status").textContent = "WhatsApp is opening. Press Send there to complete your request.";
   window.location.href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 });
-
