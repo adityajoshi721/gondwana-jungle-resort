@@ -66,7 +66,8 @@ export default function App() {
         <div className="hero-copy"><span className="eyebrow">A quieter side of Tadoba</span>
           <h1 id="hero-title">Close to the wild.<em>Closer to yourself.</em></h1>
           <p>Settle into a warm, unhurried stay near Tadoba’s wilderness. Explore the reserve, share a meal, and come back to the calm of Gondwana.</p>
-          <div className="hero-actions"><a className="button" href="#stay">Explore your stay <span aria-hidden="true">↗</span></a><a className="text-link" href="#planner">Design your stay <span aria-hidden="true">→</span></a></div>
+          <div className="hero-actions"><a className="button" href="/tadoba-stay.html">Check stays from ₹6,999 <span aria-hidden="true">↗</span></a><a className="text-link" href="#planner">Design your stay <span aria-hidden="true">→</span></a></div>
+          <p className="hero-rate-note">Per room, per night for two guests · meals and taxes included · safari extra · subject to availability</p>
           <div className="hero-notes"><span>Near Tadoba</span><span>Safari assistance</span><span>Forest-view pool</span></div>
         </div>
         <div className="hero-visual"><img src={hero} alt="Golden sunlight filtering through a lush green forest" fetchPriority="high" /><div className="hero-caption"><span />Your base for the wild</div></div>
@@ -82,7 +83,7 @@ export default function App() {
         </div>
       </section>
       <section className="section section-sand" id="stay"><div className="container">
-        <div className="section-top"><Heading eyebrow="02 / Rooms & packages" title="Room to slow down." intro="Explore real spaces at Gondwana. Ask us about room availability, group stays and current packages for your dates." /><a className="text-link desktop-only" href="#contact">Ask about a stay <span aria-hidden="true">→</span></a></div>
+        <div className="section-top"><Heading eyebrow="02 / Rooms & packages" title="Room to slow down." intro="Rooms from ₹6,999 per night for two guests, including meals and taxes. Safari charges are extra. Ask us to confirm availability and current rates for your dates." /><a className="text-link desktop-only" href="/tadoba-stay.html">Check your dates <span aria-hidden="true">→</span></a></div>
         <div className="room-grid">
           <article className="room-card"><img src={roomDouble} alt="Double-bed guest room with a warm wood floor" loading="lazy" /><div className="room-card-body"><span className="eyebrow">Stay at Gondwana</span><h3>Guest rooms</h3><p>Comfortable rooms for the pause between forest adventures.</p><a className="text-link" href="#contact">Enquire about rooms <span aria-hidden="true">→</span></a></div></article>
           <article className="room-card"><img src={roomGroup} alt="Guest room with mustard accents and wildlife artwork" loading="lazy" /><div className="room-card-body"><span className="eyebrow">A closer look</span><h3>Thoughtful details</h3><p>Warm wood, soft tones and a little of the wild. Explore the latest room photographs.</p><a className="text-link" href="#gallery">Explore the gallery <span aria-hidden="true">→</span></a></div></article>
@@ -114,3 +115,4 @@ export default function App() {
     <footer className="footer"><div className="container footer-main"><div><Brand /><p>Find your own rhythm near the forest.</p></div><div><h2>Explore</h2><a href="#about">About us</a><a href="#stay">Rooms & packages</a><a href="#gallery">Gallery</a><a href="#location">Location</a></div><div><h2>Connect</h2><a href="https://www.instagram.com/gondwana_tadoba/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.youtube.com/@vjtigerfilms6145" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href={whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Gondwana Jungle Resort</span><span>Made for the journey to Tadoba.</span></div></footer>
   </>;
 }
+
