@@ -3,6 +3,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import StayPlanner from "./components/StayPlanner.jsx";
 import Contact from "./components/Contact.jsx";
+import UpdatesSignup from "./components/UpdatesSignup.jsx";
 import logo from "./assets/image.png";
 import hero from "./assets/forest-cover.webp";
 const aerial = "/media/resort-aerial.webp";
@@ -110,6 +111,7 @@ export default function App() {
       </section>
       <section className="section container location-grid" id="location"><div className="location-copy"><Heading eyebrow="07 / Find us" title="Your gateway to Tadoba." intro="Gondwana Jungle Resort, Madanapur, Chimur, Vihirgaon, Maharashtra 442903." /><a className="button" href={maps} target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a></div><iframe title="Google Map showing Gondwana Jungle Resort near Tadoba" src="https://www.google.com/maps?q=Gondwana%20Jungle%20Resort%20Madanapur%20Maharashtra&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></section>
       <section className="section contact-section" id="contact"><div className="container contact-grid"><div><Heading eyebrow="08 / Get in touch" title="Let’s plan your time in the wild." intro="Tell us when you would like to visit and what you have in mind. We’ll help you take the next step." /><div className="contact-direct"><a href="tel:+919921150541">+91 99211 50541</a><a href="mailto:gondwana357@gmail.com">gondwana357@gmail.com</a><a href={whatsapp} target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a></div></div><Contact /></div></section>
+      <UpdatesSignup />
     </main>
     <a className="floating-enquiry" href="#planner">Plan your stay <span aria-hidden="true">↗</span></a>
     <footer className="footer"><div className="container footer-main"><div><Brand /><p>Find your own rhythm near the forest.</p></div><div><h2>Explore</h2><a href="#about">About us</a><a href="#stay">Rooms & packages</a><a href="#gallery">Gallery</a><a href="#location">Location</a></div><div><h2>Connect</h2><a href="https://www.instagram.com/gondwana_tadoba/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.youtube.com/@vjtigerfilms6145" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href={whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Gondwana Jungle Resort</span><span>Made for the journey to Tadoba. <a href="/privacy.html">Privacy</a></span></div></footer>
