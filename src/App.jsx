@@ -39,7 +39,7 @@ function Brand() {
 
 function Header() {
   const [open, setOpen] = useState(false);
-  const links = [["About", "#about"], ["Stay", "#stay"], ["Amenities", "#amenities"], ["Gallery", "#gallery"], ["Reviews", "#reviews"], ["Location", "#location"]];
+  const links = [["About", "#about"], ["Stay", "#stay"], ["Amenities", "#amenities"], ["Gallery", "#gallery"], ["Reviews", "#reviews"], ["Location", "#location"], ["Updates", "#updates"]];
   return <header className="site-header"><div className="container header-inner">
     <Brand />
     <nav className={`nav-links ${open ? "is-open" : ""}`} id="primary-nav" aria-label="Main navigation">
@@ -114,6 +114,6 @@ export default function App() {
       <UpdatesSignup />
     </main>
     <a className="floating-enquiry" href="#planner">Plan your stay <span aria-hidden="true">↗</span></a>
-    <footer className="footer"><div className="container footer-main"><div><Brand /><p>Find your own rhythm near the forest.</p></div><div><h2>Explore</h2><a href="#about">About us</a><a href="#stay">Rooms & packages</a><a href="#gallery">Gallery</a><a href="#location">Location</a></div><div><h2>Connect</h2><a href="https://www.instagram.com/gondwana_tadoba/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.youtube.com/@vjtigerfilms6145" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href={whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Gondwana Jungle Resort</span><span>Made for the journey to Tadoba. <a href="/privacy.html">Privacy</a></span></div></footer>
+    <footer className="footer"><div className="container footer-main"><div><Brand /><p>Find your own rhythm near the forest.</p></div><div><h2>Explore</h2><a href="#about">About us</a><a href="#stay">Rooms & packages</a><a href="#gallery">Gallery</a><a href="#location">Location</a></div><div><h2>Connect</h2><a href="#updates">Email updates ↗</a><a href="https://www.instagram.com/gondwana_tadoba/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.youtube.com/@vjtigerfilms6145" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href={whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Gondwana Jungle Resort</span><span>Made for the journey to Tadoba. <a href="/privacy.html">Privacy</a></span></div></footer>
   </>;
 }
