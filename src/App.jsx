@@ -4,6 +4,7 @@ import "yet-another-react-lightbox/styles.css";
 import StayPlanner from "./components/StayPlanner.jsx";
 import Contact from "./components/Contact.jsx";
 import UpdatesSignup from "./components/UpdatesSignup.jsx";
+import WelcomeSignup from "./components/WelcomeSignup.jsx";
 import logo from "./assets/image.png";
 import hero from "./assets/forest-cover.webp";
 const aerial = "/media/resort-aerial.webp";
@@ -62,6 +63,7 @@ export default function App() {
   const filteredGallery = gallery.filter(item => filter === "All" || (item.category || "Around the resort") === filter);
   return <>
     <a className="skip-link" href="#main">Skip to content</a><div id="top" /><Header />
+    <WelcomeSignup />
     <main id="main">
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy"><span className="eyebrow">A quieter side of Tadoba</span>
