@@ -52,3 +52,9 @@ Suggested next differentiators (require resort input): a verified illustrated pr
 Guest feedback now appears immediately after the hero. It includes both available guest-feedback films (the supplied celebrity visit and existing VID-20250730-WA0003), all eight saved Google review screenshots with readable excerpts, and a link to the complete live Google collection. It is not an automatically synchronized feed of every Google review.
 
 The static 4.7/5 rating comes from Google's indexed listing retrieved on 9 November 2026: https://www.google.co.in/travel/hotels/entity/CgoIjM_mg9emsux-EAE . The review count was removed because it changes. Refresh the rating manually against Google. Mrunmayee Deshpande's visit is attributed from the client's explicit confirmation and the supplied resort film's title; no formal endorsement or brand ambassadorship is claimed. No occupancy, growth or repeat-guest percentage has been invented.
+
+## Analytics and search discovery (22 November 2026)
+
+Build with `npm run build` or `node scripts/build-site.mjs`. This includes static homepage rendering and generates `dist/analytics-config.js` from `VITE_GA_MEASUREMENT_ID`. Vercel uses this command through `vercel.json`. A plain `vite build` skips those steps.
+
+GA4 is disabled without a valid public measurement ID and only loads after visitor consent. See [the measurement and AI discovery playbook](docs/ANALYTICS-AND-AI-DISCOVERY.md) for activation, event definitions, KPI formulas, reporting and verification. Run `node scripts/verify-analytics.mjs` after a build without an analytics ID. The GA4 property, reports and live receipt verification remain owner setup tasks; no private dashboard or live metrics have been fabricated.

@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "build": "vite build"
+    "build": "node scripts/build-site.mjs"
   },
-   "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "react": "^19.0.0",

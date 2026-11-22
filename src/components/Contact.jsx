@@ -24,11 +24,11 @@ export default function Contact() {
     if (data.get("website")) return; // Honeypot field for basic spam filtering.
     const fields = Object.fromEntries(data.entries());
     setStatus("");
+    window.gondwanaTrack?.("form_attempt", {form_id:"contact"});
 
     if (!emailReady) {
       const message = `Hello Gondwana, I would like to check room availability.\nName: ${fields.name}\nPhone: ${fields.phone}\nOrigin city: ${fields.city || "Not specified"}\nTravel dates: ${fields.dates || "Flexible"}\nGuests: ${fields.guests}\nMessage: ${fields.message || "Please share available options."}\nSource: ${enquirySource()}`;
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: "whatsapp_open", enquiry_source: enquirySource() });
+      window.gondwanaTrack?.("contact_click", {channel:"whatsapp", section:"contact_form"});
       window.location.href = `https://wa.me/919921150541?text=${encodeURIComponent(message)}`;
       setStatus("WhatsApp is opening. Press Send there to complete your enquiry.");
       return;
@@ -45,9 +45,11 @@ export default function Contact() {
         message: `Origin city: ${fields.city || "Not specified"}\n${fields.message || "Please share available options."}`,
         to_email: inbox,
       }, { publicKey });
+      window.gondwanaTrack?.("generate_lead", {method:"email", form_id:"contact"});
       form.reset();
       setStatus("Thank you. Your enquiry has been sent.");
     } catch {
+      window.gondwanaTrack?.("form_error", {method:"email_provider", form_id:"contact"});
       setStatus("The enquiry could not be sent. Please try WhatsApp, call us, or email us directly.");
     } finally {
       setSending(false);
